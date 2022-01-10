@@ -42,7 +42,7 @@ const LoadedReels = (props) => {
                 ></source>
             </video>
             
-            <a className = "buttonDownload" download = "yasin.mp4" href={responseObj.video_versions[0].url} >Download</a>
+            <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={responseObj.video_versions[0].url} >Download</a>
             <p className="reel-caption">{responseObj.caption.text}</p>
 
 
