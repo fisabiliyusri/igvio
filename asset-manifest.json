@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/igvio/static/css/main.594d7370.chunk.css",
-    "main.js": "/igvio/static/js/main.04a2b54d.chunk.js",
-    "main.js.map": "/igvio/static/js/main.04a2b54d.chunk.js.map",
+    "main.js": "/igvio/static/js/main.f125010d.chunk.js",
+    "main.js.map": "/igvio/static/js/main.f125010d.chunk.js.map",
     "runtime-main.js": "/igvio/static/js/runtime-main.60c1e775.js",
     "runtime-main.js.map": "/igvio/static/js/runtime-main.60c1e775.js.map",
     "static/js/2.f993e8be.chunk.js": "/igvio/static/js/2.f993e8be.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.60c1e775.js",
     "static/js/2.f993e8be.chunk.js",
     "static/css/main.594d7370.chunk.css",
-    "static/js/main.04a2b54d.chunk.js"
+    "static/js/main.f125010d.chunk.js"
   ]
 }
