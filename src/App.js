@@ -19,7 +19,7 @@ const App = () => {
         <>
             <Header />
             <Switch>
-                <Route exact path="/igvio/" component={Feed} />
+                <Route exact path="/igvio/#/" component={Feed} />
                 <Route path="/igvio/profile" component={Profile} />
                 <Route path="/igvio/story" component={Story} />
                 <Route path="/igvio/reel" component={Reels} />
