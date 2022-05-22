@@ -69,14 +69,14 @@ const Profile = (props) => {
         <SearchForm
           submitHandler={submitHandler}
           onChangehandler={onChangehandler}
-          placeholder="Paste Profile Link"
+          placeholder="Paste Profile Link !!!!!!"
         />
         <main className="profile-response">
           {isLoading && <LoadingAnimation />}
           {hasLoaded && <LoadedProfile responseObj={responseObj} />}
         </main>
       </section>
-      <Head>Insta DP viewer</Head>
+      <Head>Instas DP viewer</Head>
       <CardWrapper>
         <Image
           src={`https://uttertechnology.com/wp-content/webpc-passthru.php?src=https://uttertechnology.com/wp-content/uploads/2021/09/acastro_190919_1777_instagram_0001.0.jpg&nocache=1`}
