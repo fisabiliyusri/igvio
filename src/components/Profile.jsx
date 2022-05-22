@@ -12,10 +12,16 @@ const Profile = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
 
+  function getId(url) {
+        
+    return url.split(".com/")[1].split("/")[0].split("?igshid")[0];
+}
+
+
   function submitHandler(e) {
     e.preventDefault();
     if (userId.length === 0) {
-      alert("Empty Username !");
+      alert("Paste User URL!");
       return;
     }
     setIsLoading(true);
@@ -27,14 +33,14 @@ const Profile = (props) => {
   }
 
   async function fetchProfile() {
-    const id = userId;
+    const id = getId(userId);
     const response = await fetch(
-      `https://instagram-bulk-profile-scrapper.p.rapidapi.com/clients/api/ig/ig_profile?response_type=full&ig=${id}&corsEnabled=true`,
+      `https://instagram-bulk-profile-scrapper.p.rapidapi.com/clients/api/ig/ig_profile?response_type=full&ig=${id}&corsEnabled=false`,
       {
         method: "GET",
         headers: {
           "x-rapidapi-key":
-            "d57e68a8eamsh96aa54d1038b6ffp17cb2djsn17a540de17a9",
+          `${process.env.REACT_APP_IGVIO_KEY}`,
           "x-rapidapi-host": "instagram-bulk-profile-scrapper.p.rapidapi.com",
         },
       }
@@ -55,7 +61,7 @@ const Profile = (props) => {
         <SearchForm
           submitHandler={submitHandler}
           onChangehandler={onChangehandler}
-          placeholder="Enter Username"
+          placeholder="Paste Profile Link"
         />
         <main className="profile-response">
           {isLoading && <LoadingAnimation />}
@@ -176,3 +182,5 @@ const Para = styled.div`
   text-shadow: 2px 0 #e6683c;
 `;
 export default Profile;
+
+

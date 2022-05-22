@@ -13,7 +13,7 @@ const Post = (props) => {
   const [responseObj, setResponseObj] = useState();
 
   function getId(url) {
-    return url.slice(28, 39);
+    return url.split("/p/")[1].split(" ")[0].slice(0,11);
   }
 
   function onChangehandler(e) {
@@ -38,7 +38,7 @@ const Post = (props) => {
         method: "GET",
         headers: {
           "x-rapidapi-key":
-            "d57e68a8eamsh96aa54d1038b6ffp17cb2djsn17a540de17a9",
+          `${process.env.REACT_APP_IGVIO_KEY}`,
           "x-rapidapi-host": "instagram-bulk-profile-scrapper.p.rapidapi.com",
         },
       }

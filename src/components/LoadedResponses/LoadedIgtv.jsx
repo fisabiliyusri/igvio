@@ -31,24 +31,45 @@ const LoadedIgtv = (props) => {
 
             <article className="post-section">
                 {responseObj.media_type === 2 && (
+                    <div className="igtxdown">
                     <video className="post-media" controls>
                         <source
                             src={responseObj.video_versions[0].url}
                             type="video/webm"
                         ></source>
                     </video>
+                    <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={responseObj.video_versions[0].url} >Download Video !!!</a>
+
+                    </div>
                 )}
                 {responseObj.media_type === 1 && (
+                      <div className="igtxdown">
                     <img
                         src={responseObj.image_versions2.candidates[0].url}
                         className="post-media"
                         alt=""
                     />
+            <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={responseObj.image_versions2.candidates[0].url} >Download Video !!!</a>
+
+                    </div>
                 )}
             </article>
-            <p className="post-caption">{responseObj.caption.text}</p>
+
+            {(() => {
+    if (responseObj.caption === "NULL") {
+        return (
+          <div>No Captions</div>
+        )
+      } else if(responseObj.caption) {
+        return (
+          <p className="post-caption">{responseObj.caption.text}</p>
+        )
+      }
+    })()}
+            {/* <p className="post-caption">{responseObj.caption.text}</p> */}
         </>
     );
 };
 
 export default LoadedIgtv;
+

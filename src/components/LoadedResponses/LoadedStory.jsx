@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 const LoadedStory = (props) => {
     const responseObj = props.responseObj;
 
@@ -53,6 +55,8 @@ const LoadedStory = (props) => {
                 {storyArray.map((element, index) => {
                     if (element.media_type === 2) {
                         return (
+                            <>
+                            <div className="story-item story-box">
                             <video className="story-item" key={index} controls>
                                 <source
                                     src={element.video_versions[0].url}
@@ -60,10 +64,14 @@ const LoadedStory = (props) => {
                                     type="video/webm"
                                 ></source>
                             </video>
+                            <p>Uploaded At:  {moment.unix(element.taken_at).format("Do MMMM YYYY, h:mm:ss a")}</p>
+                            <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={element.video_versions[0].url} >Download Video !!!</a>
+                            </div>
+                            </>
                         );
                     } else {
                         return (
-                            <div className="story-item" key={index}>
+                            <div className="story-item story-box" key={index}>
                                 <img
                                     src={
                                         element.image_versions2.candidates[0]
@@ -72,6 +80,9 @@ const LoadedStory = (props) => {
                                     className="story-media"
                                     alt=""
                                 />
+                                 <p>Uploaded At:  {moment.unix(element.taken_at).format("Do MMMM YYYY, h:mm:ss a")}</p>
+                                 <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={element.image_versions2.candidates[0].url} >Download Post !!!</a>
+
                             </div>
                         );
                     }

@@ -85,6 +85,7 @@ const LoadedFeed = (props) => {
                                 ></source>
                                 
                             </video>
+                            
                             <div className = "likes">
                                 <div className = "plays">
                                 <img src={Plays} className="nav-icons" alt="search Story" />
@@ -96,7 +97,8 @@ const LoadedFeed = (props) => {
                                 </div>
                             </div>
                             <br />
-                           
+                            <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={element.video_versions[0].url} >Download !!!</a>
+
                             </div>
                             </>
                         );
@@ -122,7 +124,7 @@ const LoadedFeed = (props) => {
                                </div>
                            </div>
                            <br />
-                          
+                           <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={element.image_versions2.candidates[0].url} >Download !!!</a>
                            </div>
                            </>
                         )
@@ -147,7 +149,7 @@ const LoadedFeed = (props) => {
                                </div>
                            </div>
                            <br />
-                          
+                           <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={element.carousel_media[0].image_versions2.candidates[0].url} >Download !!!</a>
                            </div>
                            </>
                         )

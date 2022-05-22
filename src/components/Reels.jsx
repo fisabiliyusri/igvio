@@ -12,7 +12,8 @@ const Reels = (props) => {
     const [responseObj, setResponseObj] = useState();
 
     function getId(url) {
-        return url.slice(31, 42);
+        
+        return url.split("reel/")[1].split(" ")[0].slice(0,11);
     }
 
     function onChangehandler(e) {
@@ -31,6 +32,7 @@ const Reels = (props) => {
 
     async function fetchReel() {
         const reelId = getId(reelUrl);
+        console.log(reelId)
         if (reelId.length !== 11) {
             alert("Invaid Reel URL");
             setIsLoading(false);
@@ -41,12 +43,14 @@ const Reels = (props) => {
             {
                 method: "GET",
                 headers: {
-                    "x-rapidapi-key": "d57e68a8eamsh96aa54d1038b6ffp17cb2djsn17a540de17a9",
+                    "x-rapidapi-key":  `${process.env.REACT_APP_IGVIO_KEY}`,
                     "x-rapidapi-host": "instagram-bulk-profile-scrapper.p.rapidapi.com",
+                    
                 },
             }
         );
         const data = await response.json();
+        console.log(process.env.REACT_APP_IGVIO_KEY)
         setResponseObj(data[0]);
         setIsLoading(false);
         setHasLoaded(true);
