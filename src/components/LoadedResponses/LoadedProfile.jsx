@@ -16,7 +16,7 @@ const LoadedProfile = (props) => {
             <article className="profile-description">
                 <div className="profile-header">
                     <img
-                        src={responseObj.hd_profile_pic_versions[0].url}
+                        src={responseObj.profile_pic_url_hd}
                         className="profile-picture"
                         alt="Profile"
                     />
@@ -43,11 +43,11 @@ const LoadedProfile = (props) => {
             </section>
             <section className="profile-picture-container">
                 <img
-                    src={responseObj.hd_profile_pic_url_info.url}
+                    src={responseObj.profile_pic_url_hd}
                     className="fullsize-profile-picture"
                     alt="Fullsize"
                 />
-                 <a className = "buttonDownload" target="_blank" href={responseObj.hd_profile_pic_url_info.url} >View Post !!!</a>
+                 <a className = "buttonDownload" target="_blank" href={responseObj.hd_profile_pic_url_info.url} >View Profile Pic !!!</a>
             </section>
         </>
     );

@@ -5,7 +5,14 @@ import SearchForm from "./Header/SearchForm";
 import LoadedProfile from "./LoadedResponses/LoadedProfile";
 import styled from "styled-components";
 import { device } from "./device";
-
+/*
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin "_git repository link here_"
+git push -u origin main
+*/
 const Profile = (props) => {
   const [userId, setUserId] = useState("");
   const [responseObj, setResponseObj] = useState({});
@@ -34,6 +41,7 @@ const Profile = (props) => {
 
   async function fetchProfile() {
     const id = getId(userId);
+    console.log(id)
     const response = await fetch(
       `https://instagram-bulk-profile-scrapper.p.rapidapi.com/clients/api/ig/ig_profile?response_type=full&ig=${id}&corsEnabled=false`,
       {

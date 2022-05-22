@@ -18,12 +18,6 @@ const LoadedReels = (props) => {
     }
     responseObj = responseObj.items[0];
     
-<<<<<<< HEAD
-   
-
-      
-=======
->>>>>>> d27ce702c43e2dcb07d89096848e7b84cd141490
     return (
         <>
             <header className="reel-header">
@@ -48,14 +42,14 @@ const LoadedReels = (props) => {
                 ></source>
             </video>
             
-<<<<<<< HEAD
+
             <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={responseObj.video_versions[0].url} >Download !!!</a>
             {/* <p className="reel-caption">{responseObj.caption.text}</p> */}
-=======
+
             <a className = "buttonDownload" target="_blank" download = "yasin.mp4" href={responseObj.video_versions[0].url} >Download</a>
             <p className="reel-caption">{responseObj.caption.text}</p>
 
->>>>>>> d27ce702c43e2dcb07d89096848e7b84cd141490
+
 
 
             {(() => {
