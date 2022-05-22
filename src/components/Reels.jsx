@@ -39,7 +39,7 @@ const Reels = (props) => {
             return;
         }
         const response = await fetch(
-            `https://instagram-bulk-profile-scrapper.p.rapidapi.com/clients/api/ig/media_by_id?shortcode=${reelId}&response_type=reels&corsEnabled=true`,
+            `https://instagram-bulk-profile-scrapper.p.rapidapi.com/clients/api/ig/media_by_id?shortcode=${reelId}&response_type=reels&corsEnabled=false`,
             {
                 method: "GET",
                 headers: {
