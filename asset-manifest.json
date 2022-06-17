@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/igvio/static/css/main.f4e91675.chunk.css",
-    "main.js": "/igvio/static/js/main.2f572de7.chunk.js",
-    "main.js.map": "/igvio/static/js/main.2f572de7.chunk.js.map",
+    "main.css": "/igvio/static/css/main.758b201a.chunk.css",
+    "main.js": "/igvio/static/js/main.a6665454.chunk.js",
+    "main.js.map": "/igvio/static/js/main.a6665454.chunk.js.map",
     "runtime-main.js": "/igvio/static/js/runtime-main.60c1e775.js",
     "runtime-main.js.map": "/igvio/static/js/runtime-main.60c1e775.js.map",
     "static/css/2.218453dc.chunk.css": "/igvio/static/css/2.218453dc.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.085b532c.chunk.js.map": "/igvio/static/js/2.085b532c.chunk.js.map",
     "index.html": "/igvio/index.html",
     "static/css/2.218453dc.chunk.css.map": "/igvio/static/css/2.218453dc.chunk.css.map",
-    "static/css/main.f4e91675.chunk.css.map": "/igvio/static/css/main.f4e91675.chunk.css.map",
+    "static/css/main.758b201a.chunk.css.map": "/igvio/static/css/main.758b201a.chunk.css.map",
     "static/js/2.085b532c.chunk.js.LICENSE.txt": "/igvio/static/js/2.085b532c.chunk.js.LICENSE.txt",
     "static/media/feed.1b2e5222.svg": "/igvio/static/media/feed.1b2e5222.svg",
     "static/media/heart.419dbd7a.svg": "/igvio/static/media/heart.419dbd7a.svg",
@@ -26,7 +26,7 @@
     "static/js/runtime-main.60c1e775.js",
     "static/css/2.218453dc.chunk.css",
     "static/js/2.085b532c.chunk.js",
-    "static/css/main.f4e91675.chunk.css",
-    "static/js/main.2f572de7.chunk.js"
+    "static/css/main.758b201a.chunk.css",
+    "static/js/main.a6665454.chunk.js"
   ]
 }
